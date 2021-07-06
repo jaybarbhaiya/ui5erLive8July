@@ -7,10 +7,15 @@
       <Page title="Products">
         <content>
           <Table id="myTable"
-            headerText="Sales report"
+            sticky="ColumnHeaders,HeaderToolbar"
             items="{
               path: '/'
             }">
+            <headerToolbar>
+              <OverflowToolbar>
+                <Title text="Sales report" />
+              </OverflowToolbar>
+            </headerToolbar>
             <columns>
               <Column>
                 <Label text="Product Code" />
