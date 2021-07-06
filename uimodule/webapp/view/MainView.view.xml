@@ -1,6 +1,7 @@
  <mvc:View controllerName="com.myorg.myEasyUI5App.controller.MainView"
   displayBlock="true"
   xmlns="sap.m"
+  xmlns:plugins="sap.m.plugins"
   xmlns:mvc="sap.ui.core.mvc">
   <App id="idAppControl" >
     <pages>
@@ -8,20 +9,28 @@
         <content>
           <Table id="myTable"
             sticky="ColumnHeaders,HeaderToolbar"
+            autoPopinMode="true"
+            hiddenInPopin="Low"
+            popinChanged=".onPopinChanged"
             items="{
               path: '/'
             }">
+            <dependents>
+              <plugins:ColumnResizer />
+            </dependents>
             <headerToolbar>
               <OverflowToolbar>
                 <Title text="Sales report" />
+                <ToolbarSpacer />
+                <Button id="togglePopin" text="Show popins" press=".onTogglePopin"/>
               </OverflowToolbar>
             </headerToolbar>
             <columns>
-              <Column>
-                <Label text="Product Code" />
-              </Column>
-              <Column>
+              <Column importance="High">
                 <Label text="Product Name" />
+              </Column>
+              <Column importance="Low">
+                <Label text="Product Code" />
               </Column>
               <Column>
                 <Label text="Produced" />
@@ -29,7 +38,7 @@
               <Column>
                 <Label text="Sold" />
               </Column>
-              <Column>
+              <Column importance="High">
                 <Label text="Sold Percentage" />
               </Column>
             </columns>

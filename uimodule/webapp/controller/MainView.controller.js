@@ -71,6 +71,31 @@ sap.ui.define([
             oModel.setData(aData);
 
             this.getView().setModel(oModel);
+        },
+
+        onPopinChanged: function(oEvent) {
+            var oTogglePopinButton = this.byId("togglePopin");
+
+            if (oEvent.getParameter("hiddenInPopin").length ||
+                oEvent.getParameter("visibleInPopin").some(function(oColumn) {
+                    return oColumn.getImportance() == "Low";
+                })) {
+                    oTogglePopinButton.setVisible(true);
+            } else {
+                oTogglePopinButton.setVisible(false);
+            }
+        },
+
+        onTogglePopin: function(oEvent) {
+            var oTable = this.byId("myTable");
+            var oButton = oEvent.getSource();
+            if (oButton.getText() == "Show popins") {
+                oTable.setHiddenInPopin();
+                oButton.setText("Hide popins");
+            } else {
+                oTable.setHiddenInPopin(["Low"]);
+                oButton.setText("Show popins");
+            }
         }
     });
 });
