@@ -1,0 +1,21 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "myEasyUI5App",
+    "namespaceUI5": "com.myorg",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "ui5libs": "Content delivery network (OpenUI5)",
+    "newdir": true,
+    "namespaceURI": "com/myorg",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
