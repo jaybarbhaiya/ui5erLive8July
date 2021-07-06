@@ -18,10 +18,10 @@
             </headerToolbar>
             <columns>
               <Column>
-                <Label text="Product Code" />
+                <Label text="Product Name" />
               </Column>
               <Column>
-                <Label text="Product Name" />
+                <Label text="Product Code" />
               </Column>
               <Column>
                 <Label text="Produced" />
