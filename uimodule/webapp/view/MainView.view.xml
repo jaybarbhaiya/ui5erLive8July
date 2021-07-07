@@ -4,7 +4,7 @@
   xmlns:mvc="sap.ui.core.mvc">
   <App id="idAppControl" >
     <pages>
-      <Page title="Products">
+      <Page>
         <content>
           <Table id="myTable"
             sticky="ColumnHeaders,HeaderToolbar"
