@@ -44,8 +44,8 @@
             </columns>
             <items>
               <ColumnListItem>
-                <Text text="{ProductCode}" />
                 <Text text="{ProductName}" />
+                <Text text="{ProductCode}" />
                 <ObjectNumber number="{Produced}" unit="{Unit}" />
                 <ObjectNumber number="{Sold}" unit="{Unit}" />
                 <ObjectNumber number="{SoldPercent}"
